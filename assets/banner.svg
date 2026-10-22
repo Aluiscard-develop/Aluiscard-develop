@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-label="Luis Fernando Meza Loaiza — Software Engineer · Python · Full Stack .NET · Automation &amp; Monitoring">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#2c2742" stroke-width="1"/>
+    </pattern>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="cut"><path d="M0 0H1172L1200 28V300H28L0 272Z"/></clipPath>
+    <style>
+      .mono { font-family: "JetBrains Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; }
+      .disp { font-family: "Chakra Petch", "Segoe UI", "Helvetica Neue", Arial, sans-serif; font-weight: 700; }
+      .cursor { animation: blink 1s steps(1) infinite; }
+      @keyframes blink { 50% { opacity: 0; } }
+      @media (prefers-reduced-motion: reduce) { .cursor { animation: none; } }
+    </style>
+  </defs>
+  <g clip-path="url(#cut)">
+    <rect width="1200" height="300" fill="#0a0912"/>
+    <rect width="1200" height="300" fill="url(#grid)"/>
+    <rect x="0" y="0" width="1200" height="300" fill="none" stroke="#2c2742" stroke-width="2"/>
+    <rect x="56" y="58" width="36" height="3" fill="#34e4ea" filter="url(#glow)"/>
+    <text x="104" y="66" class="mono" font-size="16" letter-spacing="3" fill="#34e4ea">SYSTEMS ENGINEER · COSTA RICA · 5+ YEARS</text>
+    <text x="53" y="148" class="disp" font-size="68" letter-spacing="1" fill="#ff3d8b" opacity=".85">LUIS FERNANDO MEZA</text>
+    <text x="59" y="148" class="disp" font-size="68" letter-spacing="1" fill="#34e4ea" opacity=".85">LUIS FERNANDO MEZA</text>
+    <text x="56" y="148" class="disp" font-size="68" letter-spacing="1" fill="#ecebf5">LUIS FERNANDO MEZA</text>
+    <text x="56" y="196" class="mono" font-size="20" fill="#ecebf5">Software Engineer <tspan fill="#ff3d8b">//</tspan> <tspan fill="#f4e409">Python</tspan> <tspan fill="#ff3d8b">//</tspan> <tspan fill="#f4e409">Full Stack .NET</tspan> <tspan fill="#ff3d8b">//</tspan> Automation &amp; Monitoring</text>
+    <text x="56" y="248" class="mono" font-size="16" fill="#a9a5c2">&gt; aluiscard-develop.github.io<tspan class="cursor" fill="#ff3d8b"> █</tspan></text>
+    <path d="M1200 200V300H1100Z" fill="#f4e409"/>
+    <rect x="1040" y="40" width="104" height="104" fill="none" stroke="#ff3d8b" stroke-width="2" transform="rotate(45 1092 92)" opacity=".5"/>
+    <rect x="1066" y="66" width="52" height="52" fill="none" stroke="#34e4ea" stroke-width="2" transform="rotate(45 1092 92)" filter="url(#glow)"/>
+  </g>
+</svg>
