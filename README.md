@@ -12,6 +12,7 @@ Systems Engineer from Costa Rica with **5+ years** building enterprise software 
 - 🔧 Now: **Python Developer / Automation Engineer**: Python services, process automation, **Zabbix** monitoring and service testing.
 - 🏛️ Before: full stack .NET for public and private sector clients (Blazor, ASP.NET, Entity Framework, Oracle, SAP).
 - 📱 On the side: Android apps in Kotlin, React Native, local-first web apps and AI-assisted development tooling.
+- 🧪 Exploring: **local AI agents**, small open models running on my own laptop with Ollama and Hermes Agent, no cloud.
 - 🌎 Spanish (native) · English (intermediate)
 
 ### Tech stack
@@ -81,6 +82,7 @@ Ingeniero en Sistemas de Costa Rica con **más de 5 años** desarrollando softwa
 - Hoy: **Python Developer / Automation Engineer**: servicios en Python, automatización de procesos, monitoreo con **Zabbix** y pruebas de servicios.
 - Antes: full stack .NET para el sector público y privado (Blazor, ASP.NET, Entity Framework, Oracle, SAP).
 - En paralelo: apps Android en Kotlin, React Native, web local-first y herramientas de desarrollo asistido por IA.
+- Explorando: **agentes de IA locales**, modelos abiertos pequeños corriendo en mi propia laptop con Ollama y Hermes Agent, sin nube.
 
 Portafolio completo, en español e inglés: **[aluiscard-develop.github.io](https://aluiscard-develop.github.io/)**
 
