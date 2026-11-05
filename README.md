@@ -51,7 +51,7 @@ Systems Engineer from Costa Rica with **5+ years** building enterprise software 
 
 | Project | What it does | Stack | Status |
 |---|---|---|---|
-| [**Espejo**](https://aluiscard-develop.github.io/espejo-app/) | Personal style advisor that runs 100 % in the browser: the photo never leaves the device | JavaScript · MediaPipe · PWA | 🟢 [Live](https://aluiscard-develop.github.io/espejo-app/) |
+| [**Faceora**](https://aluiscard-develop.github.io/faceora/) | Personal style advisor (English & Spanish) that runs 100 % in the browser: the photo never leaves the device | JavaScript · MediaPipe · PWA | 🟢 [Live](https://aluiscard-develop.github.io/faceora/) |
 | **KitFlow** | Mobile app to track scale-model kits from wishlist to collection; ES / EN / JA | React Native · Expo · SQLite | 🟡 Google Play closed testing |
 | **GYMpro** | Android gym app with rest timer, routines, nutrition and an AI coach | Kotlin · Compose · Room · Claude API | 🟢 v1.0.0 signed |
 | **Mis-Finanzas** | Personal finance in colones and dollars, on-device receipt OCR, encrypted DB | Kotlin · Hilt · SQLCipher · ML Kit | 🔵 In development |
