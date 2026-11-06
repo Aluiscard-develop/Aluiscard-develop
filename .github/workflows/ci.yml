@@ -39,6 +39,9 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 0
+          # Repos públicos con ruleset en main: empuja con la deploy key de CI (Normas/ci/blindar-main.sh).
+          # Sin el secreto, ssh-key queda vacío y se usa GITHUB_TOKEN como en los privados.
+          ssh-key: ${{ secrets.PROMOCION_KEY }}
       - name: main avanza al commit probado (solo fast-forward)
         run: |
           git push origin "${GITHUB_SHA}:refs/heads/main"

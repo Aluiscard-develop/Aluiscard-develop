@@ -16,6 +16,11 @@ jobs:
       - name: main recibió un push directo
         env:
           QUIEN: ${{ github.actor }}
+          BLINDADO: ${{ secrets.PROMOCION_KEY != '' }}
         run: |
+          if [ "$BLINDADO" = true ]; then
+            echo "main está blindado por ruleset (solo la deploy key de CI puede moverlo): nada que vigilar."
+            exit 0
+          fi
           echo "::error::main recibió un push directo de ${QUIEN}. main solo cambia por la promoción de CI desde develop."
           exit 1
