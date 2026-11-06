@@ -1,0 +1,14 @@
+#!/bin/sh
+# Pre-push de Normas: bloquea cualquier push a main/master (estandares/17-ci-y-github.md).
+# Cópialo tal cual a <proyecto>/.githooks/pre-push. Emergencia, con motivo: NORMAS_PERMITIR_MAIN=1 git push …
+R="$(git rev-parse --show-toplevel)"
+for N in "$R/githooks/comun.sh" "$R/../Normas/githooks/comun.sh"; do
+  [ -f "$N" ] && break
+done
+if [ -f "$N" ]; then
+  . "$N"
+  normas_prepush "$1" || exit 1
+else
+  echo "⚠ pre-push: no encuentro Normas/githooks/comun.sh; no se comprueba main" >&2
+fi
+exit 0

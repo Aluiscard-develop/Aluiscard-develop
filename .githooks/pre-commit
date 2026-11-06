@@ -1,0 +1,11 @@
+#!/bin/sh
+# Pre-commit genérico de Normas: solo las comprobaciones comunes (githooks/comun.sh).
+# Cópialo a <proyecto>/.githooks/pre-commit y añade debajo el lint rápido del proyecto si lo tiene.
+N="$(git rev-parse --show-toplevel)/../Normas/githooks/comun.sh"
+if [ -f "$N" ]; then
+  . "$N"
+  normas_comun || exit 1
+else
+  echo "⚠ pre-commit: no encuentro ../Normas/githooks/comun.sh; no se comprueba nada" >&2
+fi
+exit 0

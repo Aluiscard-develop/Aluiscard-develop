@@ -1,0 +1,46 @@
+# CI del README de perfil (Normas/estandares/17-ci-y-github.md).
+# pruebas → main avanza (fast-forward). main sigue siendo la rama por defecto: el perfil y el
+# cron de snake.yml leen de ella.
+name: CI
+
+on:
+  push:
+    branches: [develop]
+  pull_request:
+    branches: [develop]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  pruebas:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Pruebas del sitio
+        run: python3 -m unittest discover -s .github/tests -v
+
+  promover:
+    needs: pruebas
+    if: github.event_name == 'push' && github.ref == 'refs/heads/develop'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+      - name: main avanza al commit probado (solo fast-forward)
+        run: |
+          git push origin "${GITHUB_SHA}:refs/heads/main"
+          echo "main → ${GITHUB_SHA}" >> "$GITHUB_STEP_SUMMARY"
+

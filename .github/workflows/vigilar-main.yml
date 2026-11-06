@@ -1,0 +1,21 @@
+# La promoción de CI empuja con GITHUB_TOKEN, y eso no dispara workflows. Si este corre,
+# alguien empujó a main sin pasar por develop + pruebas: se marca en rojo para revisarlo.
+name: Vigilar main
+
+on:
+  push:
+    branches: [main]
+
+permissions: {}
+
+jobs:
+  push-directo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: main recibió un push directo
+        env:
+          QUIEN: ${{ github.actor }}
+        run: |
+          echo "::error::main recibió un push directo de ${QUIEN}. main solo cambia por la promoción de CI desde develop."
+          exit 1
